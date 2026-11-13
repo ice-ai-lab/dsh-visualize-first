@@ -1,6 +1,6 @@
 # dsh-visualize-first
 
-DeepSeek Harness 技能：回答任何「讲清楚」类问题时先出图。唯一交付方式是把 SVG 落盘到工作区临时目录（`.dsh-tmp/diagrams/`）后用 `![说明](相对路径)` 内联在正文里。
+DeepSeek Harness 技能：回答任何「讲清楚」类问题时先出图。交付是硬性的两步：先用 `write` 把 SVG 落盘到工作区临时目录（`.dsh-tmp/diagrams/`），再用 `![说明](相对路径)` 内联在正文里——**没有 write 的引用必然「图片无法预览」**。
 
 ## 这个技能解决什么
 

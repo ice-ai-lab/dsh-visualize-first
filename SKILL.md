@@ -2,9 +2,9 @@
 name: dsh-visualize-first
 slug: dsh-visualize-first
 displayName: DSH Visualize First
-version: 1.4.0
-summary: 回答任何"讲清楚"类问题时先出图。唯一交付方式是 SVG 落盘到工作区临时目录后用内联引用。含 DSH 宿主渲染链路实测（代码块只高亮不渲染、data URI 被拒、图片只解析工作区内路径）、触发规则、配色排版规范与故障排查。
-description: 回答讲解、科普、是什么、为什么、怎么工作、原理、对比、区别、选哪个、架构、分层、流程、因果、状态机、时间线、数据趋势、占比、排名、清单、方案权衡类问题时，务必先加载本技能再作答。它会给出该画什么图、怎么画。唯一交付方式是把 SVG 落盘到工作区临时目录（.dsh-tmp/diagrams/）再用内联引用嵌入正文——裸 SVG、代码块、data URI、DSH_HOME 内的文件都无法渲染成图。
+version: 1.5.0
+summary: 回答任何"讲清楚"类问题时先出图。图是 write 出来的：正文里每个图片引用之前必须有一次成功的 write 落盘到工作区 .dsh-tmp/diagrams/，没有 write 的引用必然显示"图片无法预览"。含触发规则、配色排版规范与故障排查。
+description: 回答讲解、科普、是什么、为什么、怎么工作、原理、对比、区别、选哪个、架构、分层、流程、因果、状态机、时间线、数据趋势、占比、排名、清单、方案权衡类问题时，务必先加载本技能再作答。它会给出该画什么图、怎么画。交付流程是硬性的两步：先用 write 把 SVG 落盘到工作区临时目录（.dsh-tmp/diagrams/<名字>.svg），再用 ![]() 内联引用该路径——**跳过 write 直接写引用 = 图必然无法预览**；裸 SVG、代码块、data URI、DSH_HOME 内的文件也都无法渲染成图。
 license: MIT
 ---
 
